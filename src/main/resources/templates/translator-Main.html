@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<div th:each="el : ${post}">
+    <form action="/" method="post">
+        <input id="russianWord" name="russianWord" type="text" class="form-control"/> Русский<br/>
+        <input id="botlihWord" name="botlihWord" type="text" class="form-control"/> Ботлихский<br/>
+        <button type="submit" class="btn btn-success">Перевести</button>
+        <br/>
+        <input type="text" name="translateAll" class="form-control" th:value="${el}" style="
+    padding-bottom: 100px;"/>
+    </form>
+    <script>
+        document.getElementById("russianWord").value = null;
+        document.getElementById("russianWord").onclick = function () {
+            document.getElementById("botlihWord").value = null;
+        }
+        document.getElementById("botlihWord").onclick = function () {
+            document.getElementById("russianWord").value = null;
+        }
+    </script>
+</div>
+</body>
+</html>
