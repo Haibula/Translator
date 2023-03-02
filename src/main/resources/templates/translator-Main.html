@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>DagTranslate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Unbounded:wght@400;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/button.css">
+    <link rel="stylesheet" href="/lable.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/text-write.css">
 </head>
 <body>
+<h1>Da<span class="col">g</span>Translate</h1>
 <div th:each="el : ${post}">
-    <form action="/" method="post">
-        <input id="russianWord" name="russianWord" type="text" class="form-control"/> Русский<br/>
-        <input id="botlihWord" name="botlihWord" type="text" class="form-control"/> Ботлихский<br/>
-        <button type="submit" class="btn btn-success">Перевести</button>
-        <br/>
-        <input type="text" name="translateAll" class="form-control" th:value="${el}" style="
-    padding-bottom: 100px;"/>
+    <form novalidate action="/" method="post" class="sector_all">
+        <div class="sector">
+            <div class="inputBox"><input id="russianWord" required="required" autocomplete="off" name="russianWord"
+                                         type="text"
+                                         class="form-control" placeholder="Введите текст"/> <span>Русский</span></div>
+            <div class="inputBox"><input id="botlihWord" required="required" autocomplete="off" name="botlihWord" type="text"
+                                         class="form-control" placeholder="Введите текст"/> <span>Ботлихский</span>
+            </div>
+        </div>
+        <button type="submit" class="btn_btn-success">П Е Р Е В Е С Т И</button>
+        <div class="inputForm"><input id="FormhWord" type="text" name="translateAll" required="required"
+                                      class="form-control-one" placeholder="Результат Перевода" th:value="${el}"/></div>
     </form>
     <script>
+
         document.getElementById("russianWord").value = null;
         document.getElementById("russianWord").onclick = function () {
             document.getElementById("botlihWord").value = null;

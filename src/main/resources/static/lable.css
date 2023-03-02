@@ -1,0 +1,48 @@
+.inputBox{
+    position: relative;
+    width: 400px;
+
+}
+.inputBox input{
+    border: 1.1px solid rgb(0, 77, 166);
+    border-radius: 1.1px;
+    width: 100%;
+    padding:25px;
+    background-color:rgb(29, 29, 29);
+    outline: none;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    transition: all 0.4s ease;
+    font-size: 23px;
+}
+.inputBox input:hover {
+    border: 1.1px solid rgb(0, 119, 255);
+    border-radius: 1.1px;
+}
+.inputBox input:focus,
+.inputBox input:valid{
+    border: 1.1px solid rgb(0, 119, 255);
+    border-radius: 1.1px;
+}
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 12px;
+    pointer-events: none;
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+    background:rgb(0, 77, 166);
+    transform: translateX(20px) translateY(-12px);
+    font-size: 0.90em;
+    padding: 3px 15px;
+    border-radius: 1.1px;
+    transition: all 0.4s ease;
+}
+.inputBox input:hover ~ span{
+    background:rgb(0, 119, 255);
+    border-radius: 1.1px;
+}
+.inputBox input:focus ~ span,.inputBox input:valid ~ span{
+    background:rgb(0, 119, 255);
+    border-radius: 1.1px;
+} 
