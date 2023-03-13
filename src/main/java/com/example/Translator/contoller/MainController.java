@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
 @Controller
 public class MainController {
     @Autowired
@@ -20,7 +25,7 @@ public class MainController {
     @GetMapping("/")
     public String translator(Model model) {
         model.addAttribute("post", "-");
-        return "translator-Main";
+        return "refactor";
     }
 
     @PostMapping("/")
@@ -31,7 +36,7 @@ public class MainController {
         } catch (Exception e) {
             return "redirect:/";
         }
-        return "translator-Main";
+        return "refactor";
     }
 
     @GetMapping("/addWord")
@@ -55,5 +60,27 @@ public class MainController {
         tranlatorRepositort.save(translate);
 
         return "addWord";
+    }
+
+    @GetMapping("/allWorks")
+    String getAllWorks(Model model) {
+        String result = null;
+        String result1 = null;
+        Iterable<Translate> authorizations = tranlatorRepositort.findAll();
+        Iterator iterator = authorizations.iterator();
+        ArrayList<Translate> arr = new ArrayList<>();
+        while (iterator.hasNext()) {
+            arr.add((Translate) iterator.next());
+        }
+        Map<String, String> map = new HashMap<>();
+        for (int i = 0; i < arr.size(); i++) {
+            map.put(arr.get(i).getRussianWord(), arr.get(i).getBotlihWord());
+        }
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            result += " Рус-->" + entry.getKey() + " Ботл-->" + entry.getValue();
+        }
+        System.out.println(result);
+        model.addAttribute("post", result + " " + result1);
+        return "allWorks";
     }
 }

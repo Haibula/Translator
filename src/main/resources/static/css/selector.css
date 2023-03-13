@@ -1,0 +1,65 @@
+.select-menu{
+    /* border: 1px solid red;  */
+    width: 170px;
+    margin: 2px 30px;
+    position: absolute;
+    z-index: 1;
+}
+ul {
+    list-style-type: none; /* Убирает буллиты */
+   }
+.select-menu .select-btn{
+    display: flex;
+    background:rgb(0, 98, 255);
+    padding: 5px;
+    height: 30px;
+    padding-left: 15px;
+    border-radius: 1.5px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s ease-out;
+}
+.select-btn i{
+    font-size: 15px;  
+    transition: 0.4s;  
+}
+.select-menu.active .select-btn i{
+    transform: rotate(-180deg);
+}
+.select-menu .options{   
+    position: relative;;
+    padding: 0px;
+    /* padding-left: 0px; */
+    margin-top: 1px;
+    border-radius: 1.5px; 
+    /* color: #fff; */
+    background:rgb(255, 255, 255);
+    display: none;
+}
+.select-menu.active .options{
+    display: block;
+}
+.sBtn-text{
+    background:rgb(0, 98, 255);
+}
+.bx-chevron-down{
+    background:rgb(0, 98, 255);
+}
+.options .option .option-text{
+    display: flex;
+    height: 30px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 1.5px; 
+    align-items: center;
+    background:rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.401);
+    transition: all 0.1s ease-out;
+}
+.options .option .option-text:hover{
+    background:rgb(0, 98, 255);
+    color: #fff;
+}

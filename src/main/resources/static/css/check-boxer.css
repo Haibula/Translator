@@ -1,0 +1,35 @@
+#checkbox-field{
+    border: 1px solid rgba(255, 255, 255, 0);
+    appearance: none;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 60px;
+    height: 25px;
+    background: rgb(0, 119, 255);
+    border-radius: 30px;
+    cursor: pointer; 
+    transition: 0.2s linear;   
+}
+#checkbox-field::before{
+    content:'';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 30px;
+    height: 21px;
+    background: rgb(255, 255, 255);
+    border-radius: 26px;
+    transition: 0.2s linear;  
+}
+/* #checkbox-field:checked + .reg {
+    color: rgb(255, 255, 255); 
+} */
+#checkbox-field:checked{
+    border: 1px solid rgb(0, 119, 255);
+    background: rgb(240, 240, 240);
+}
+#checkbox-field:checked::before{
+    left:27px;
+    background:rgb(0, 119, 255);
+}

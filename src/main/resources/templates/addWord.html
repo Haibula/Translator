@@ -1,16 +1,103 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap"
+      rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Unbounded:wght@400;900&display=swap"
+      rel="stylesheet">
+<link rel="stylesheet" href="css/colon-one.css">
+<link rel="stylesheet" href="css/selector.css">
+<link rel="stylesheet" href="css/selector-dooble.css">
+<link rel="stylesheet" href="css/check-boxer.css">
+<link rel="stylesheet" href="css/form-control.css">
+<link rel="stylesheet" href="css/button-active-translate.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<title>Проба</title>
 </head>
-<body>
-<div>
-    <form action="/addWord" method="post">
-        <input type="text" name="russianWord" class="form-control"/> Русский<br/>
-        <input type="text" name="botlihWord" class="form-control"/> Ботлихский<br/>
-        <button type="submit" class="btn btn-success">Добавить</button>
-    </form>
-</div>
+<body class="bounse">
+<input type="checkbox" name="checkbox-field" id="checkbox-field">
+<div class="reg">Da<span class="col">g</span>Translate</div>
+
+<form action="/addWord" method="post" class="sector-ell">
+
+
+    <div class="sector-All">
+        <div class="sector-one">
+            <div class="select-menu">
+                <div class="select-btn">
+                    <span class="sBtn-text">Выберите</span>
+                    <i class="bx bx-chevron-down"></i>
+                </div>
+                <ul class="options">
+                    <li class="option">
+                        <span class="option-text">Русский</span>
+                    </li>
+                    <li class="option">
+                        <span class="option-text">Даргинский</span>
+                    </li>
+                    <li class="option">
+                        <span class="option-text">Аварский</span>
+                    </li>
+                    <li class="option">
+                        <span class="option-text">Кумыкский</span>
+                    </li>
+                    <li class="option">
+                        <span class="option-text">Ботлихский</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="inputbox"><input id="russianWord" required="required" name="russianWord" type="text"
+                                         class="form-control" placeholder="Введите текст"/></div>
+        </div>
+        <div class="sector-two">
+            <div class="select-menu-dooble">
+                <div class="select-btn-dooble">
+                    <span class="sBtn-text-dooble">Выберите</span>
+                    <i class="bx bx-chevron-down"></i>
+                </div>
+                <ul class="options-dooble">
+                    <li class="option-dooble">
+                        <span class="option-text-dooble">Русский</span>
+                    </li>
+                    <li class="option-dooble">
+                        <span class="option-text-dooble">Даргинский</span>
+                    </li>
+                    <li class="option-dooble">
+                        <span class="option-text-dooble">Аварский</span>
+                    </li>
+                    <li class="option-dooble">
+                        <span class="option-text-dooble">Кумыкский</span>
+                    </li>
+                    <li class="option-dooble">
+                        <span class="option-text-dooble">Ботлихский</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="inputbox-one"><input id="botlihWord" required="required" name="botlihWord" type="text"
+                                             class="form-control" placeholder="Введите текст"/></div>
+        </div>
+    </div>
+    <div class="box-rider">
+        <button type="submit" class="btn_btn-success">Д О Б А В И Т Ь</button>
+
+    </div>
+</form>
+<script src="js/selector.js"></script>
+
 </body>
+<script>
+    document.getElementById("russianWord").onclick = function () {
+    }
+    document.getElementById("botlihWord").onclick = function () {
+    }</script>
 </html>
+
+
+
+

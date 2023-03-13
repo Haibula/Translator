@@ -1,0 +1,58 @@
+.box-rider{
+    
+    margin: auto;
+    justify-content: center;
+    width: 902.5px;
+    height: 450px;
+}
+.inputForm{
+    display: block;
+    width: 862px;
+    margin-top:20px;
+}
+.inputForm input{
+    border: 1px solid rgba(0, 98, 255, 0.634);
+    border-radius: 1.1px;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 283px;
+    background: rgb(240, 240, 240);
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Fira Sans', sans-serif;
+    transition: all 0.2s ease;
+    font-size: 25px;
+    box-shadow: 4px 4px rgba(139, 139, 139, 0.149);
+
+}
+.inputForm input:hover {
+    background: rgb(255, 255, 255);
+    border: 1.1px solid rgb(0, 119, 255);
+    border-radius: 1.1px;
+}
+.inputForm input:focus,
+.inputForm input:valid{
+    background: rgb(255, 255, 255);
+    border: 1.1px solid rgb(0, 119, 255);
+    border-radius: 1.1px;
+}
+.inputForm.activery input{
+    transition: all 0.2s ease;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 98, 255, 0.634);
+    background: rgba(240, 240, 240, 0);
+}
+.inputForm.activery input:hover {
+    border: 1.1px solid rgb(0, 119, 255);
+    border-radius: 1.1px;
+}
+.inputForm.activery input:focus,
+.inputForm.activery input:valid{
+    border: 1.1px solid rgb(0, 119, 255);
+    border-radius: 1.1px;
+}
+.inputForm.activery input::placeholder{
+    color: rgba(255, 255, 255, 0.453);
+}
