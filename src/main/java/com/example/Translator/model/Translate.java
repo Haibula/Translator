@@ -23,6 +23,8 @@ public class Translate {
 
     private String botlihWord;
 
+    private String avarWord;
+
     public Translate() {
 
     }

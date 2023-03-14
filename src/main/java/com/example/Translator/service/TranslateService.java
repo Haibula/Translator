@@ -42,10 +42,10 @@ public class TranslateService {
         for (String word : split) {
             if (!russianWord.isEmpty()) {
                 Optional<Translate> post = tranlatorRepositort.findAllByRussianWord(word);
-                result += " " + returnWordWithFirstUooerCaseLetter(post.get().getBotlihWord());
+                result += " " + returnWordWithFirstWooerCaseLetter(post.get().getBotlihWord());
             } else {
                 Optional<Translate> post = tranlatorRepositort.findAllByBotlihWord(word);
-                result += " " + returnWordWithFirstUooerCaseLetter(post.get().getRussianWord());
+                result += " " + returnWordWithFirstWooerCaseLetter(post.get().getRussianWord());
             }
 
         }
@@ -56,10 +56,10 @@ public class TranslateService {
         String result = "";
         if (existsRussianWord) {
             Optional<Translate> post = tranlatorRepositort.findAllByRussianWord(russianWord);
-            result = returnWordWithFirstUooerCaseLetter(post.get().getBotlihWord());
+            result = returnWordWithFirstWooerCaseLetter(post.get().getBotlihWord());
         } else {
             Optional<Translate> post = tranlatorRepositort.findAllByBotlihWord(botlihWord);
-            result = returnWordWithFirstUooerCaseLetter(post.get().getRussianWord());
+            result = returnWordWithFirstWooerCaseLetter(post.get().getRussianWord());
         }
         return result;
     }
@@ -74,7 +74,7 @@ public class TranslateService {
         return result;
     }
 
-    public String returnWordWithFirstUooerCaseLetter(String word) {
+    public String returnWordWithFirstWooerCaseLetter(String word) {
 
         return word.substring(0, 1)
                 .toUpperCase() + word

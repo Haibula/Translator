@@ -26,6 +26,7 @@ optionsdooble.forEach(option => {
     option.addEventListener("click", () => {
         let selectedOption = option.querySelector(".option-text-dooble").innerText;
         sBtn_textdooble.innerText = selectedOption;
+        localStorage.setItem("language", selectedOption)
         console.log(selectedOption)
         optionMenudooble.classList.remove("active");
     })

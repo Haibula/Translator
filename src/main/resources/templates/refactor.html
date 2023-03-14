@@ -25,36 +25,19 @@
 
 <body class="bounse">
 <input type="checkbox" name="checkbox-field" id="checkbox-field">
+<script>
 
-
+</script>
 <div class="reg">Da<span class="col">g</span>Translate</div>
 <div th:each="el : ${post}">
 
-    <form action="/" method="post" class="sector-ell">
+    <form method="post" class="sector-ell">
         <div class="sector-All">
             <div class="sector-one">
                 <div class="select-menu">
                     <div class="select-btn">
                         <span id="spanRes" class="sBtn-text">Русский</span>
-                        <i class="bx bx-chevron-down"></i>
                     </div>
-                    <ul class="options">
-                        <li class="option">
-                            <span class="option-text">Русский</span>
-                        </li>
-                        <li class="option">
-                            <span class="option-text">Даргинский</span>
-                        </li>
-                        <li class="option">
-                            <span class="option-text">Аварский</span>
-                        </li>
-                        <li class="option">
-                            <span class="option-text">Кумыкский</span>
-                        </li>
-                        <li class="option">
-                            <span class="option-text">Ботлихский</span>
-                        </li>
-                    </ul>
                 </div>
 
                 <div class="inputbox"><input id="russianWord" name="russianWord" type="text"
@@ -67,9 +50,6 @@
                         <i class="bx bx-chevron-down"></i>
                     </div>
                     <ul class="options-dooble">
-                        <li class="option-dooble">
-                            <span class="option-text-dooble">Русский</span>
-                        </li>
                         <li class="option-dooble">
                             <span class="option-text-dooble">Даргинский</span>
                         </li>
@@ -86,6 +66,8 @@
                 </div>
                 <div class="inputbox-one"><input id="botlihWord" name="botlihWord" type="text"
                                                  class="form-control" placeholder="Введите текст" autocomplete="off"/>
+<!--                <div class="inputbox-one"><input id="botlihWord" name="avarWord" type="text"-->
+<!--                                                 class="form-control" placeholder="Введите текст" autocomplete="off"/>-->
                 </div>
             </div>
         </div>
@@ -97,17 +79,17 @@
         </div>
     </form>
     <script src="js/selector.js"></script>
-    <script>
 
-        document.getElementById("russianWord").value = null;
-        document.getElementById("russianWord").onclick = function () {
-            document.getElementById("botlihWord").value = null;
-        }
-        document.getElementById("botlihWord").onclick = function () {
-            document.getElementById("russianWord").value = null;
-        }
-    </script>
 </div>
 </body>
+<script>
 
+    // if (localStorage.getItem('language') ==="Аварский"){
+    //     document.getElementById("botlihWord").name="avarWord"
+    // }
+
+    if (localStorage.getItem('language') !== null) {
+        sBtn_textdooble.innerText = localStorage.getItem('language')
+    }
+</script>
 </html>
